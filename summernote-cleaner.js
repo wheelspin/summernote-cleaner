@@ -83,6 +83,9 @@
                         }
                         var text=cleanText(text);
                         var $dom=$('<div class="pasted"/>').html(text);
+                        
+                        var editorid = $(this).attr('id');
+                        
                         $note.summernote('insertNode',$dom[0]);
                         $('.note-resizebar').append('<div class="cleanerAlert" style="position:absolute;bottom:0;left:2px;font-size:10px;">'+lang.cleaner.notification+'</div>');
                         setTimeout(function(){$('.cleanerAlert').remove();},options.time);
